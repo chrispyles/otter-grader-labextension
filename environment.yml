@@ -1,0 +1,9 @@
+name: otter-grader-labextension
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - jupyterlab=4
+  - nodejs=18
+  - copier=8
+  - jinja2-time

@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.0.7
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: cpyles@berkeley.edu
+author_name: Chris Pyles
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: otter-grader-labextension
+project_short_description: A JupyterLab extension for Otter-Grader.
+python_name: otter_grader_labextension
+repository: https://github.com/chrispyles/otter-grader-labextension
+test: true
+
