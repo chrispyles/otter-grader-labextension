@@ -1,5 +1,5 @@
 {
   "packageManager": "python",
-  "packageName": "otter_grader_labextension",
-  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package otter_grader_labextension"
+  "packageName": "otter-grader-labextension",
+  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package otter-grader-labextension"
 }

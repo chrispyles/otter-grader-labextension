@@ -1,4 +1,4 @@
-# otter_grader_labextension
+# otter-grader-labextension
 
 [![Github Actions Status](https://github.com/chrispyles/otter-grader-labextension/workflows/Build/badge.svg)](https://github.com/chrispyles/otter-grader-labextension/actions/workflows/build.yml)
 A JupyterLab extension for Otter-Grader.
@@ -12,7 +12,7 @@ A JupyterLab extension for Otter-Grader.
 To install the extension, execute:
 
 ```bash
-pip install otter_grader_labextension
+pip install otter-grader-labextension
 ```
 
 ## Uninstall
@@ -20,7 +20,7 @@ pip install otter_grader_labextension
 To remove the extension, execute:
 
 ```bash
-pip uninstall otter_grader_labextension
+pip uninstall otter-grader-labextension
 ```
 
 ## Contributing
@@ -35,7 +35,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the otter_grader_labextension directory
+# Change directory to the otter-grader-labextension directory
 # Install package in development mode
 pip install -e "."
 # Link your development version of the extension with JupyterLab
@@ -64,7 +64,7 @@ jupyter lab build --minimize=False
 ### Development uninstall
 
 ```bash
-pip uninstall otter_grader_labextension
+pip uninstall otter-grader-labextension
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
