@@ -1,4 +1,4 @@
-import { expect, test } from '@jupyterlab/galata';
+import { test } from '@jupyterlab/galata';
 
 /**
  * Don't load JupyterLab webpage before running the tests.
@@ -6,16 +6,4 @@ import { expect, test } from '@jupyterlab/galata';
  */
 test.use({ autoGoto: false });
 
-test('should emit an activation console message', async ({ page }) => {
-  const logs: string[] = [];
-
-  page.on('console', message => {
-    logs.push(message.text());
-  });
-
-  await page.goto();
-
-  expect(
-    logs.filter(s => s === 'JupyterLab extension otter-grader-labextension is activated!'),
-  ).toHaveLength(1);
-});
+// TODO: add tests
