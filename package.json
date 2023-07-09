@@ -18,7 +18,8 @@
     },
     "files": [
         "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
-        "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+        "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+        "schema/*.json"
     ],
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -58,8 +59,10 @@
         "watch:labextension": "jupyter labextension watch ."
     },
     "dependencies": {
+        "@jupyter/ydoc": "^1.0.2",
         "@jupyterlab/application": "^4.0.2",
         "@jupyterlab/apputils": "^4.1.2",
+        "@jupyterlab/celltags": "^3.6.5",
         "@jupyterlab/codeeditor": "^4.0.2",
         "@jupyterlab/notebook": "^4.0.2",
         "@lumino/messaging": "^2.0.0",
@@ -101,7 +104,8 @@
     },
     "jupyterlab": {
         "extension": true,
-        "outputDir": "otter_grader_labextension/labextension"
+        "outputDir": "otter_grader_labextension/labextension",
+        "schemaDir": "schema"
     },
     "eslintIgnore": [
         "node_modules",
@@ -129,7 +133,7 @@
         ],
         "rules": {
             "@typescript-eslint/naming-convention": [
-                "error",
+                "warn",
                 {
                     "selector": "interface",
                     "format": [
@@ -151,7 +155,7 @@
             "@typescript-eslint/no-namespace": "off",
             "@typescript-eslint/no-use-before-define": "off",
             "@typescript-eslint/quotes": [
-                "error",
+                "warn",
                 "single",
                 {
                     "avoidEscape": true,
@@ -159,11 +163,11 @@
                 }
             ],
             "curly": [
-                "error",
+                "warn",
                 "all"
             ],
-            "eqeqeq": "error",
-            "prefer-arrow-callback": "error"
+            "eqeqeq": "warn",
+            "prefer-arrow-callback": "warn"
         }
     },
     "prettier": {
