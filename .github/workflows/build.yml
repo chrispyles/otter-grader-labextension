@@ -77,7 +77,7 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab>=4.0.0,<5" otter-grader-labextension*.whl
+          pip install "jupyterlab>=4.0.0,<5" otter_grader_labextension*.whl
 
 
           jupyter labextension list
@@ -107,7 +107,7 @@ jobs:
       - name: Install the extension
         run: |
           set -eux
-          python -m pip install "jupyterlab>=4.0.0,<5" otter-grader-labextension*.whl
+          python -m pip install "jupyterlab>=4.0.0,<5" otter_grader_labextension*.whl
 
       - name: Install dependencies
         working-directory: ui-tests
