@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "Cell Toolbar",
+  "description": "Cell Toolbar Settings.",
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-edit",
+        "items": [
+          {
+            "type": "separator"
+          },
+          {
+            "type": "submenu",
+            "submenu": {
+              "id": "jp-mainmenu-edit-otter-grader",
+              "label": "Otter-Grader",
+              "items": [
+                {
+                  "command": "add-assignment-config-cell",
+                  "rank": 0
+                },
+                {
+                  "command": "add-code-question",
+                  "rank": 1
+                },
+                {
+                  "command": "add-manual-question",
+                  "rank": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "jupyter.lab.transform": true,
+  "properties": {
+    "toolbar": {
+      "title": "Notebook panel toolbar items",
+      "items": {
+        "$ref": "#/definitions/toolbarItem"
+      },
+      "type": "array",
+      "default": []
+    }
+  },
+  "definitions": {
+    "toolbarItem": {
+      "properties": {
+        "name": {
+          "title": "Unique name",
+          "type": "string"
+        },
+        "args": {
+          "title": "Command arguments",
+          "type": "object"
+        },
+        "command": {
+          "title": "Command id",
+          "type": "string",
+          "default": ""
+        },
+        "disabled": {
+          "title": "Whether the item is ignored or not",
+          "type": "boolean",
+          "default": false
+        },
+        "icon": {
+          "title": "Item icon id",
+          "description": "If defined, it will override the command icon",
+          "type": "string"
+        },
+        "label": {
+          "title": "Item label",
+          "description": "If defined, it will override the command label",
+          "type": "string"
+        },
+        "type": {
+          "title": "Item type",
+          "type": "string",
+          "enum": [
+            "command",
+            "spacer"
+          ]
+        },
+        "rank": {
+          "title": "Item rank",
+          "type": "number",
+          "minimum": 0,
+          "default": 50
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false,
+      "type": "object"
+    }
+  }
+}
