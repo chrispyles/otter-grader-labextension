@@ -81,10 +81,7 @@
         "type": {
           "title": "Item type",
           "type": "string",
-          "enum": [
-            "command",
-            "spacer"
-          ]
+          "enum": ["command", "spacer"]
         },
         "rank": {
           "title": "Item rank",
@@ -93,9 +90,7 @@
           "default": 50
         }
       },
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "additionalProperties": false,
       "type": "object"
     }
