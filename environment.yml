@@ -7,3 +7,8 @@ dependencies:
   - nodejs=18
   - copier=8
   - jinja2-time
+  - pip
+  - pip:
+      - build
+      - pytest
+      - pytest-check-links[cache]
