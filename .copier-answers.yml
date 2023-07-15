@@ -8,7 +8,7 @@ has_settings: false
 kind: frontend
 labextension_name: otter-grader-labextension
 project_short_description: A JupyterLab extension for Otter-Grader.
-python_name: otter-grader-labextension
+python_name: otter_grader_labextension
 repository: https://github.com/chrispyles/otter-grader-labextension
 test: true
 

@@ -44,6 +44,7 @@ jobs:
         run: |
           set -eux
 
+<<<<<<< HEAD
           pip install build
           python -m build
           pip uninstall -y "otter-grader-labextension" jupyterlab
@@ -54,6 +55,18 @@ jobs:
           name: extension-artifacts
           path: dist/otter_grader_labextension*
           if-no-files-found: error
+=======
+        pip install build
+        python -m build
+        pip uninstall -y "otter_grader_labextension" jupyterlab
+
+    - name: Upload extension packages
+      uses: actions/upload-artifact@v3
+      with:
+        name: extension-artifacts
+        path: dist/otter_grader_labextension*
+        if-no-files-found: error
+>>>>>>> parent of ce47e59 (rename python package to otter-grader-labextension)
 
   test_isolated:
     needs: build
@@ -104,10 +117,17 @@ jobs:
         with:
           name: extension-artifacts
 
+<<<<<<< HEAD
       - name: Install the extension
         run: |
           set -eux
           python -m pip install "jupyterlab>=4.0.0,<5" otter_grader_labextension*.whl
+=======
+    - name: Install the extension
+      run: |
+        set -eux
+        python -m pip install "jupyterlab>=4.0.0,<5" otter_grader_labextension*.whl
+>>>>>>> parent of ce47e59 (rename python package to otter-grader-labextension)
 
       - name: Install dependencies
         working-directory: ui-tests
@@ -131,6 +151,7 @@ jobs:
         run: |
           jlpm playwright test
 
+<<<<<<< HEAD
       - name: Upload Playwright Test report
         if: always()
         uses: actions/upload-artifact@v3
@@ -139,6 +160,16 @@ jobs:
           path: |
             ui-tests/test-results
             ui-tests/playwright-report
+=======
+    - name: Upload Playwright Test report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: otter_grader_labextension-playwright-tests
+        path: |
+          ui-tests/test-results
+          ui-tests/playwright-report
+>>>>>>> parent of ce47e59 (rename python package to otter-grader-labextension)
 
   check_links:
     name: Check Links

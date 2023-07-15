@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
-name = "otter-grader-labextension"
+name = "otter_grader_labextension"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
@@ -32,24 +32,24 @@ source = "nodejs"
 fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["otter-grader-labextension/labextension"]
+artifacts = ["otter_grader_labextension/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"otter-grader-labextension/labextension" = "share/jupyter/labextensions/otter-grader-labextension"
+"otter_grader_labextension/labextension" = "share/jupyter/labextensions/otter-grader-labextension"
 "install.json" = "share/jupyter/labextensions/otter-grader-labextension/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "otter-grader-labextension/_version.py"
+path = "otter_grader_labextension/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "otter-grader-labextension/labextension/static/style.js",
-    "otter-grader-labextension/labextension/package.json",
+    "otter_grader_labextension/labextension/static/style.js",
+    "otter_grader_labextension/labextension/package.json",
 ]
-skip-if-exists = ["otter-grader-labextension/labextension/static/style.js"]
+skip-if-exists = ["otter_grader_labextension/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -59,7 +59,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "otter-grader-labextension/labextension"
+build_dir = "otter_grader_labextension/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"
