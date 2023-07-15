@@ -73,7 +73,11 @@ before-build-npm = [
     "jlpm",
     "jlpm build:prod"
 ]
-before-build-python = ["jlpm clean:all"]
+before-build-python = [
+    "python -m pip install 'jupyterlab>=4.0.0,<5'",
+    "jlpm",
+    "jlpm clean:all"
+]
 
 [tool.check-wheel-contents]
 ignore = ["W002"]
