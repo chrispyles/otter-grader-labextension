@@ -44,16 +44,16 @@ jobs:
         run: |
           set -eux
 
-        pip install build
-        python -m build
-        pip uninstall -y "otter_grader_labextension" jupyterlab
+          pip install build
+          python -m build
+          pip uninstall -y "otter_grader_labextension" jupyterlab
 
-    - name: Upload extension packages
-      uses: actions/upload-artifact@v3
-      with:
-        name: extension-artifacts
-        path: dist/otter_grader_labextension*
-        if-no-files-found: error
+      - name: Upload extension packages
+        uses: actions/upload-artifact@v3
+        with:
+          name: extension-artifacts
+          path: dist/otter_grader_labextension*
+          if-no-files-found: error
 
   test_isolated:
     needs: build
@@ -131,14 +131,14 @@ jobs:
         run: |
           jlpm playwright test
 
-    - name: Upload Playwright Test report
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: otter_grader_labextension-playwright-tests
-        path: |
-          ui-tests/test-results
-          ui-tests/playwright-report
+      - name: Upload Playwright Test report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: otter_grader_labextension-playwright-tests
+          path: |
+            ui-tests/test-results
+            ui-tests/playwright-report
 
   check_links:
     name: Check Links
