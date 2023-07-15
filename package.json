@@ -1,6 +1,6 @@
 {
     "name": "otter-grader-labextension",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A JupyterLab extension for Otter-Grader.",
     "keywords": [
         "jupyter",
