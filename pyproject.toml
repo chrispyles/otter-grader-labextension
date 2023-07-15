@@ -61,6 +61,9 @@ npm = ["jlpm"]
 source_dir = "src"
 build_dir = "otter_grader_labextension/labextension"
 
+[tool.jupyter-releaser]
+skip = ["build-npm"]
+
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"
 
