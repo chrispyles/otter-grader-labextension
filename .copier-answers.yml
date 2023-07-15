@@ -6,7 +6,7 @@ author_name: Chris Pyles
 has_binder: false
 has_settings: false
 kind: frontend
-labextension_name: otter-grader-labextension
+labextension_name: otter_grader_labextension
 project_short_description: A JupyterLab extension for Otter-Grader.
 python_name: otter_grader_labextension
 repository: https://github.com/chrispyles/otter-grader-labextension
