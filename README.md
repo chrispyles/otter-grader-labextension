@@ -6,9 +6,9 @@ A JupyterLab extension for [Otter-Grader](https://otter-grader.readthedocs.io/).
 
 This extension adds a new sub-menu to the Edit menu that allows users to quickly insert the necessary cells for authoring an assignment with Otter Assign. The menu currently supports:
 
-* Adding an assignment config cell
-* Adding cells for a new autograded question
-* Adding cells for a new manually graded question
+- Adding an assignment config cell
+- Adding cells for a new autograded question
+- Adding cells for a new manually graded question
 
 ![Otter-Grader Edit Menu](images/menu.png)
 
@@ -20,7 +20,7 @@ This extension adds a new sub-menu to the Edit menu that allows users to quickly
 
 ## Requirements
 
-* JupyterLab >= 4.0.0
+- JupyterLab >= 4.0.0
 
 ## Install
 
