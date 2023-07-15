@@ -46,7 +46,7 @@ jobs:
 
           pip install build
           python -m build
-          pip uninstall -y "otter-grader-labextension" jupyterlab
+          pip uninstall -y "otter_grader_labextension" jupyterlab
 
       - name: Upload extension packages
         uses: actions/upload-artifact@v3
@@ -135,7 +135,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: otter-grader-labextension-playwright-tests
+          name: otter_grader_labextension-playwright-tests
           path: |
             ui-tests/test-results
             ui-tests/playwright-report

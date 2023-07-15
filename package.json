@@ -28,9 +28,6 @@
         "type": "git",
         "url": "https://github.com/chrispyles/otter-grader-labextension.git"
     },
-    "workspaces": [
-        "ui-tests"
-    ],
     "scripts": {
         "build": "jlpm build:lib && jlpm build:labextension:dev",
         "build:prod": "jlpm clean && jlpm build:lib:prod && jlpm build:labextension",
@@ -41,7 +38,7 @@
         "clean": "jlpm clean:lib",
         "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
         "clean:lintcache": "rimraf .eslintcache .stylelintcache",
-        "clean:labextension": "rimraf otter-grader-labextension/labextension otter-grader-labextension/_version.py",
+        "clean:labextension": "rimraf otter_grader_labextension/labextension otter_grader_labextension/_version.py",
         "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
         "eslint": "jlpm eslint:check --fix",
         "eslint:check": "eslint . --cache --ext .ts,.tsx",
@@ -70,7 +67,8 @@
     },
     "devDependencies": {
         "@jupyterlab/builder": "^4.0.0",
-        "@jupyterlab/testutils": "^4.0.0",
+        "@jupyterlab/testutils": "^4.0.2",
+        "@playwright/test": "^1.35.1",
         "@types/jest": "^29.2.0",
         "@types/json-schema": "^7.0.11",
         "@types/react": "^18.0.26",
@@ -81,6 +79,7 @@
         "eslint-config-prettier": "^8.7.0",
         "eslint-plugin-prettier": "^4.2.1",
         "jest": "^29.2.0",
+        "jest-canvas-mock": "^2.5.2",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.8.7",
         "rimraf": "^4.4.1",
@@ -104,7 +103,7 @@
     },
     "jupyterlab": {
         "extension": true,
-        "outputDir": "otter-grader-labextension/labextension",
+        "outputDir": "otter_grader_labextension/labextension",
         "schemaDir": "schema"
     },
     "eslintIgnore": [

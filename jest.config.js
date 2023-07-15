@@ -21,4 +21,5 @@ module.exports = {
   coverageReporters: ['lcov', 'text'],
   testRegex: 'src/.*/.*.spec.ts[x]?$',
   transformIgnorePatterns: [`/node_modules/(?!${esModules}).+`],
+  setupFiles: [...baseConfig.setupFiles, 'jest-canvas-mock'],
 };
